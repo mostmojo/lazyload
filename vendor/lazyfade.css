@@ -1,0 +1,15 @@
+.lazy-fade {
+	animation: fadeIn 1.825s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX( -280px );
+	}
+	100% {
+		opacity: 1;
+		transform: translateX( 0px );
+	}
+
+}
