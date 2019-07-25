@@ -1,0 +1,24 @@
+{# templates/_macros.twig
+	`data-src` attribute will be toggled with `function lazyLoader()`
+#}
+
+{% macro imageLazy( file, transform, default_alt_text, class ) -%}
+	<img{% if class is not null %} class="{{ class }}"{% endif %} data-src="{{ file.getUrl( transform ) }}" width="{{ file.getWidth( transform ) }}" height="{{ file.getHeight( transform ) }}" alt="{{ file.altText ?? default_alt_text }}">
+{%- endmacro %}
+
+{# templates/insert_file_path #}
+
+{% from '_macros' import imageLazy %}
+{# some code #}
+{% if useLazy is defined and useLazy %}
+	{{ imageLazy( item.image[0], transformSize ?? 'listingImage', null, 'lazy card__image' ) }}
+{% endif %}
+
+{# templates/insert_partial_file_path
+	useLazy: will apply a `lazy` class to any array value > 3, to trigger lazy loading
+	NB: `loop.index > 3` will ensure the first three images do not contain the `data-src` attribute, and contain the normal src attribute, thus not lazy loaded, for better UX
+#}
+
+{% include '_components/_some-card' with {
+	'useLazy': loop.index > 3
+} %}
