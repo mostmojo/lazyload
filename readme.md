@@ -51,4 +51,4 @@ Add `useLazy` variable in your included partial
 } %}
 ```
 -----
-More info: `addons/lazyload/example.twig`
+More info: `example.twig`
