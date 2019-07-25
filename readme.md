@@ -51,4 +51,4 @@ Add `useLazy` variable in your included partial
 } %}
 ```
 -----
-More info: `example.twig`
+More info: [example.twig](https://github.com/mostmojo/lazyload/blob/master/example.twig)
