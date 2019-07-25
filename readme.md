@@ -17,6 +17,10 @@ A technique that defers image loads until they are needed and thus, improves web
 
 - Add `import { lazyLoader } from './vendor/lazyload.js';` *and* `( () => { lazyLoader(); } )();` to `raw/js/main.js`.
 
+- Uncomment `img.classList.add( 'lazy-fade' );` if you want pretty, lazyloaded image transitions.
+
+- Add `lazy-fade-in.css` file, or the code inside it, to your project's CSS/SASS files.
+
 -----
 ```diff
 ! Anything below this line is only applicable to PHP's twig syntax / Yii framework.
