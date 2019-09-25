@@ -1,7 +1,7 @@
 
 # Lazy load
 
-A technique that defers image loads until they are needed and therefor, improves website performance.
+A technique that defers image loads until they are needed and thus, improves website performance.
 
 ## Components
 
