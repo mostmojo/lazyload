@@ -36,7 +36,7 @@ At the top of your template, add
 {% from '_macros' import image %}
 {% from '_macros' import imageLazy %}
 ```
-Add a conditional operator to use `imageLazy` and `image macros`. E.g:
+Add a conditional operator to use `imageLazy` & `image macros`. E.g:
 ```
 {% if useLazy is defined and useLazy %}
 	{{ imageLazy( item.image[0], transformSize ?? 'listingImage', null, 'lazy card__image' ) }}
